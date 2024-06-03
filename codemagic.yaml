@@ -1,0 +1,16 @@
+﻿workflows:
+  default:
+    name: Default
+    instance_type: linux_x2
+    max_build_duration: 60
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: "*"
+          include: true
+          source: true
+      cancel_previous_builds: true
+    scripts:
+      - name: Install .NET SDK
+        script: ./docker-compose.sh
