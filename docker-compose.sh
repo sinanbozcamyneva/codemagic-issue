@@ -1,2 +1,4 @@
+#!/bin/bash
+
+set -e
 docker-compose up --detach
-sleep 1m
